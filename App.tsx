@@ -1,7 +1,8 @@
 import React,{Component} from "react";
 import { View, Text, Image, Dimensions, StyleSheet, StatusBar } from "react-native";
-import imgBanner from './source/assets/images/awan.jpg'
+// import imgBanner from './source/assets/images/awan.jpg'
 import OvoComponent from './source/component/OvoComponent'
+import FiturUtama from './source/component/FiturUtama'
 
 // Menggunakan Dimension untuk membuat heigh dan width bisa langsung full mengikuti devices
 const {height,width} = Dimensions.get('window')
@@ -47,10 +48,10 @@ class Home extends Component{
         <StatusBar barStyle="dark-content" translucent backgroundColor="rgba(0,0,0,0)"/>
 
         {/* Memanggil gambar dengan import */}
-        <Image style={styles.imageBanner} source={imgBanner} />
+        {/* <Image style={styles.imageBanner} source={imgBanner} /> */}
 
         {/* Cara memanggil gambar dengan lokasi yang telah kita sediakan */}
-        {/* <Image style={styles.imageBanner} source={require('./source/assets/images/awan.jpg')} /> */}
+        <Image style={styles.imageBanner} source={require('./source/assets/images/awan.jpg')} />
 
         {/* Cara memanggil gambar dengan link */}
         {/* <Image style={styles.imageBanner} source={{uri:"https://i.imgur.com/RciblSw.jpg"}} /> */}
@@ -65,8 +66,12 @@ class Home extends Component{
 
           {/* Memanggil Component yang telah kita buat didalam folder component */}
           <OvoComponent></OvoComponent>
-          
+
         </View>
+
+          <View style={{marginHorizontal: 18}}>
+            <FiturUtama></FiturUtama>
+          </View>
       </View>
     )
   }
